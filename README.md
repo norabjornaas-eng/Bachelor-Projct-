@@ -1,44 +1,69 @@
-# API Vulnerability Testing with VoAPI2
+Bachelor Project – API Vulnerability Testing
 
-This project documents API vulnerability testing using the VoAPI2 tool on:
+This repository contains my bachelor project in cybersecurity, completed as part of a student project in collaboration with SmartSec Lab.
 
-- **Appwrite**
-- **Gitea**
-- **Jellyfin**
+The project focuses on vulnerability-oriented testing of RESTful APIs using the VoAPI2 framework.
+The goal is to evaluate how automated testing can identify security weaknesses in real API systems.
 
----
+The APIs tested in this project are:
 
-## 🔧 Tools Used
-- **VoAPI2** (open-source vulnerability scanner for REST APIs)
+Appwrite
 
----
+Gitea
 
-## 📁 Project Structure
+Jellyfin
 
-specs/ # OpenAPI specs for each API (YAML) tools/VoAPI2/ # VoAPI2 test runner and input files results/ # Findings per application scripts/ # Start services and run tests configs/ # Tokens (if used) docs/rapport.pdf # Final written report
+Project description
 
+Modern applications rely heavily on RESTful APIs, which makes them an important attack surface.
+In this project, we used an automated vulnerability testing framework to systematically test APIs and analyze their security behavior.
 
----
+The work included:
 
-## ▶️ How to Use
+Setting up the test environment
 
-1. Start Docker containers:
-```bash
-bash scripts/start_servers.sh
+Preparing OpenAPI specifications
 
-2. Run all VoAPI2 tests:
-bash scripts/run_tests.sh
+Running automated security tests
 
-This will scan Appwrite, Gitea and Jellyfin using run_voapi2.sh.
+Analyzing the output
 
-🧾 Results
+Comparing the results with earlier experiments
 
-results/Appwrite/findings.md
-results/Gitea/findings.md
-results/Jellyfin/findings.md
+Project description
 
-Raw VoAPI2 output files are stored in:
-tools/VoAPI2/output/[app]/
+Modern applications rely heavily on RESTful APIs, which makes them an important attack surface.
+In this project, we used an automated vulnerability testing framework to systematically test APIs and analyze their security behavior.
 
+Project description
+
+Modern applications rely heavily on RESTful APIs, which makes them an important attack surface.
+In this project, we used an automated vulnerability testing framework to systematically test APIs and analyze their security behavior.
+
+The work included:
+
+Setting up the test environment
+
+Preparing OpenAPI specifications
+
+Running automated security tests
+
+Analyzing the output
+
+Comparing the results with earlier experiments
+
+Results
+
+The testing identified several security-relevant issues, including:
+
+SSRF-related behavior in Appwrite
+
+Possible input validation and injection weaknesses
+
+Data exposure caused by API misconfigurations
+
+Sensitive administrative endpoints in Gitea
+
+Detailed findings are stored in the results folder.
 
 
